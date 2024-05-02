@@ -9,7 +9,6 @@ btn.addEventListener("click", () => {
   //     image.src = json.message
 
   // })
-
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
   xhr.send();
@@ -19,6 +18,8 @@ btn.addEventListener("click", () => {
     console.log(json);
     image.src = json.message;
   });
-
-
 });
+
+
+const myDate = Date.now()
+console.log(myDate);
