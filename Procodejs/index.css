@@ -1,0 +1,7 @@
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+    transform: rotate(10px) scale(10px);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
