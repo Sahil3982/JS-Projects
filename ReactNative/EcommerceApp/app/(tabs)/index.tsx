@@ -1,43 +1,37 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import React = require("react");
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { FontAwesome } from '@expo/vector-icons'; // Expo's vector icons
+import Home from "../Pages/Home";
+import Reorder from "../Pages/Reorder";
+import Cart from "../Pages/Cart";
+import Account from "../Pages/Account";
 
 const Tab = createBottomTabNavigator();
-
-const Home = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home</Text>
-    </View>
-  );
-};
-
-const Reorder = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Reorder</Text>
-    </View>
-  );
-};
-
-const Cart = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Cart</Text>
-    </View>
-  );
-};
-const Account = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Account</Text>
-    </View>
-  );
-};
-
 const Index = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+
+          if (route.name === "HOME") {
+            iconName = focused ? "home" : "home";
+          } else if (route.name === "REORDER") {
+            iconName = focused ? "refresh" : "refresh";
+          } else if (route.name === "CART") {
+            iconName = focused ? "shopping-cart" : "shopping-cart";
+          } else if (route.name === "ACCOUNT") {
+            iconName = focused ? "user" : "user";
+          }
+
+          // You can return any icon component here!
+          return <FontAwesome name={iconName} size={size} color={color} />;
+        },
+        tabBarActiveTintColor: 'tomato',
+        tabBarInactiveTintColor: 'gray',
+      })}
+    >
       <Tab.Screen name="HOME" component={Home} />
       <Tab.Screen name="REORDER" component={Reorder} />
       <Tab.Screen name="CART" component={Cart} />
