@@ -1,5 +1,6 @@
 import { Button, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
+import { Link } from "expo-router";
 export default function () {
   const [count, setcount] = useState(0);
 
@@ -18,6 +19,10 @@ export default function () {
       <Text>{count}</Text>
       <Button title="Stop" ></Button>
       <Button title="Singup" color={"green"}></Button>
+
+
+       <Link href='/account'>Click</Link>
     </View>
+    
   );
 }
