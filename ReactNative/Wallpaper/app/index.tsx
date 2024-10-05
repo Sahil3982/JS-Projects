@@ -20,8 +20,10 @@ export default function () {
       <Button title="Stop" ></Button>
       <Button title="Singup" color={"green"}></Button>
 
-
-       <Link href='/account'>Click</Link>
+    
+       <Link href='/account'>Click on account</Link>
+       <Link href='/foryou'>Click on for u</Link>
+       <Link href='/explore'>Click on explore</Link>
     </View>
     
   );
