@@ -1,30 +1,10 @@
-import { Button, Text, View } from "react-native";
-import React, { useEffect, useState } from "react";
-import { Link } from "expo-router";
-export default function () {
-  const [count, setcount] = useState(0);
+import React from 'react'
+import { Text } from 'react-native'
 
-  useEffect(() => {
-    let time = setInterval(() => {
-      setcount(count => count + 1);
-    }, 1000);
- return ()=>{
-    clearInterval(time);
-
- }
-  },[]);
+const Foryou = () => {
   return (
-    <View>
-      <Button title="Login"></Button>
-      <Text>{count}</Text>
-      <Button title="Stop" ></Button>
-      <Button title="Singup" color={"green"}></Button>
-
-    
-       <Link href='/account'>Click on account</Link>
-       <Link href='/foryou'>Click on for u</Link>
-       <Link href='/explore'>Click on explore</Link>
-    </View>
-    
-  );
+    <Text>Foryou</Text>
+  )
 }
+
+export default Foryou
