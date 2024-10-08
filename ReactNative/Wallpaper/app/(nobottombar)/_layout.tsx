@@ -6,7 +6,10 @@ const _layout = () => {
   return (
     <View>
       <Text>Go Back</Text>
-      <Slot />
+      <View>
+        {" "}
+        <Slot />
+      </View>
     </View>
   );
 };
