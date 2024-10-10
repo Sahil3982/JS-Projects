@@ -6,7 +6,7 @@ const account = () => {
   return (
     <SafeAreaView>
       <Text>account</Text>
-      <Link href={'./_layout'}>clcik</Link>
+      <Link href={'./accountinfo'}>Account Page</Link>
     </SafeAreaView>
   );
 };
